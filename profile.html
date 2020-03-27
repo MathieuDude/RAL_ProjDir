@@ -23,13 +23,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-image: url('./content/crowd_background.jpg');">
     <!-- Navbar exemple: IMPORTANT D'IMPORTER LES SCRIPT ET LINK -->
-    <nav class="navcontainer navbar navbar-expand-sm navbar-dark sticky-top">
+    <nav class="navcontainer navbar navbar-expand-sm sticky-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <!--Link to home page-->
-                <img src="./img/logo.png" width="185" height="39">
+                <img src="./img/logo.png" width="185" height="35">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
     </nav>
 
     <div class="profile_container row">
-        <div class="col-4">
+        <div class="col-lg-3 col-s-12">
             <div class="profile">
                 <h4>Votre Profil</h4>
                 <h5>Bienvenue [NAME]</h5>
@@ -76,10 +76,10 @@
             </div>
         </div>
         <!--info about profile and edit button that leads to another identical page with a form in place of the straight up info-->
-        <div class="col-8">
+        <div class="col-lg-3 col-s-12">
             <div class="information">
                 <h4>Vos Informations</h4>
-                <button type="button" class="btn btn-dark">Éditer mes infos</button>
+                <button type="button" class="gen_button btn">Éditer mes infos</button>
 
                 <form action="/action_page.php" method="post">
                     <label for="firstname">Prénom: </label><br>
@@ -140,6 +140,8 @@
     
     .profile_container {
         margin: 2%;
+        display: flex;
+        justify-content: center;
     }
     
     .profilepic {
@@ -149,6 +151,17 @@
         overflow: hidden;
         border: 3px solid #343A40;
         border-radius: 100%;
+    }
+    h4 {
+        font-weight: bold;
+    }
+    .nav-link {
+        color:black;
+    }
+    .gen_button {
+        background-color: #2B406B;
+        border: 1.5px solid black ;
+        color: white;
     }
 </style>
 
